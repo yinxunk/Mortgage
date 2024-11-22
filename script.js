@@ -35,6 +35,9 @@ button.addEventListener("click", () => {
     const mortgagevalue = mortgagetinput.value;
     const termvalue = terminput.value;
     const ratevalue = rateinput.value;
+    console.log(mortgagevalue);
+    console.log(termvalue);
+    console.log(ratevalue);;
     if(mortgagevalue === ''){
         if(!document.getElementById('errorlabelmv')){
             const label = document.createElement('label');
@@ -85,9 +88,11 @@ button.addEventListener("click", () => {
         dark.innerHTML = '';
         
         if(repaymentinput.checked){
-            const total = (mortgagevalue * (ratevalue/100) * termvalue);
+            ratepercent = ratevalue/100;
+            
+            const total = mortgagevalue * ((ratepercent/12) * Math.pow(1 + (ratepercent/12), (termvalue*12))) /(Math.pow(1 + (ratepercent/12), (termvalue*12)) - 1);
             const totalround = Number.parseFloat(total).toFixed(2);
-            const totalterm = mortgagevalue + (mortgagevalue * (ratevalue/100) * termvalue);
+            const totalterm = Number.parseFloat(mortgagevalue) + Number.parseFloat(total);
             const totaltermround = Number.parseFloat(totalterm).toFixed(2);
             const totaldiv = document.createElement('div');
             const description = document.createElement('div');

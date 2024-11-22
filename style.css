@@ -1,359 +1,471 @@
+body {
+    background-color: aliceblue;
+    font-family:'Plus Jakarta Sans';
+    
+    
 
-    body {
-        background-color: aliceblue;
-        font-family:'Plus Jakarta Sans';
-        
-        
+}
+p{
+    margin: 0;
+}
+
+label {
+    font-size: 11px;
+    color: hsl(201, 29%, 46%);
+}
+input[type = "number"]{
+    border: 0;
+    width: 100%;
+}
+
+input[type = "number"]::-webkit-outer-spin-button, input[type = "number"]::-webkit-inner-spin-button {
+    border: 0;
+    appearance: none;
+}
+
+input[type = "number"]:focus {
+    outline: none;
+    border: 0;
+    appearance: none;
+}
+.whole{
     
-    }
-    p{
-        margin: 0;
-    }
+    height: 60%;
+    max-width: 900px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     
-    label {
-        font-size: 11px;
-        color: hsl(201, 29%, 46%);
-    }
-    input[type = "number"]{
-        border: 0;
-        width: 100%;
-    }
+    margin: auto;
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.white {
+    flex:1 0 50%;
+    max-width: 50%;
+    justify-content:space-evenly;
+    display: flex;
+    flex-direction: column;
     
-    input[type = "number"]::-webkit-outer-spin-button, input[type = "number"]::-webkit-inner-spin-button {
-        border: 0;
-        appearance: none;
-    }
+    box-sizing: border-box;
     
-    input[type = "number"]:focus {
-        outline: none;
-        border: 0;
-        appearance: none;
-    }
-    .whole{
-        
-        height: 60%;
-        max-width: 900px;
-        position: absolute;
-        top:0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        
-        margin: auto;
+
+}
+
+.dark{
+    flex:1 0 50%;
+    border-radius: 0% 20px 20px 70px;
+    max-width: 50%;
+    background-color: hsl(202, 55%, 16%);
+    justify-content: center ;
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    
+}
+
+.darkcontainer {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-self: center;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.imagediv {
+    margin:20px 20px 0 20px;
+    text-align: center;
+    padding-bottom: 0;
+    width: 70%;
+    align-self: center;
+}
+.imagediv img{
+    max-width: 50%;
+}
+.h3div {
+    text-align: center;
+    
+}
+
+.h3div h3{
+    color: white;
+}
+.pdiv {
+    text-align: center;
+    padding:0 1.2em 1em 1.2em;
+}
+
+.pdiv p {
+    color: rgb(189, 189, 189);
+    font-size: 13px
+}
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('./assets/PlusJakartaSans-VariableFont_wght.ttf');
+    font-weight: 500 700;
+}
+
+@font-face {
+    font-family:'Plus Jakarta Sans b' ;
+    src: url('./assets/PlusJakartaSans-Bold.ttf');
+    font-weight: 500 700;
+}
+
+.mc {
+    display: flex;
+    justify-content: space-between;
+    height: 1.5em;
+    align-items: center;
+    align-self: center;
+    width: 90%;
+}
+
+.mc h3{
+    font-size: 20px;
+}
+
+.mc a {
+    font-size: 11px;
+    align-self: center;
+    margin: 0;
+    text-decoration: underline;
+}
+
+.mc a:hover{
+    cursor: pointer;
+    text-shadow: 2px 2px 2px hsl(202, 55%, 16%);
+}
+
+.mortgageamount{
+    width: 90%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+}
+.mortgageinput input {
+    width: 100%;
+    border-radius: 3px;
+}
+.mortgageinput button {
+    width: 15%;
+    border-radius: 3px;
+}
+
+.mortgageinput {
+    display: flex;
+    border: 1px solid hsl(201, 29%, 46%);
+    border-radius: 3px;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.mortgageinput:hover{
+    border: 1px solid hsl(202, 55%, 16%);
+}
+
+.mortgageamount label {
+    margin-bottom: 0.75em;
+}
+
+
+.calculate {
+    
+    
+    
+    border-radius: 20px;
+    border: 0px;
+    font-family: 'Plus Jakarta sans b';
+    width: 90%;
+    align-self: center;
+    
+    
+    
+
+}
+
+.calculatebutton {
+    font-size: 13px;
+    
+    background-color: hsl(61, 70%, 52%);
+    border-radius: 20px;
+    border: 0px;
+    font-family: 'Plus Jakarta sans b';
+    width: fit-content;
+    height: 2.5em;
+    text-align: center;
+    
+}
+
+
+.calculatebutton:hover{
+    background-color: hsl(61, 51%, 61%);
+}
+.calculatebutton::before {
+    content: url('./assets/icon-calculator.svg'); 
+    vertical-align: middle;       
+            
+}
+.mortgagetermandrates{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-self: center;
+    height: fit-content;
+    
+    
+}
+
+.term{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    border-radius:3px;
+    
+
+
+    
+}
+
+.rates{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius:3px;
+
+    
+}
+
+.rateinput {
+    display: flex;
+    width: 100%;
+    border: 1px solid hsl(201, 29%, 46%);
+    border-radius: 3px;
+    height: 35px;
+    justify-content: space-between;
+    margin-top: 0.5em;
+    border-radius:3px;
+}
+
+.rateinput input {
+    border-radius: 3px;
+}
+.rateinput:hover{
+    border: 1px solid hsl(202, 55%, 16%);
+}
+.terminput {
+    display: flex;
+    width: 100%;
+    border: 1px solid hsl(201, 29%, 46%);
+    border-radius: 3px;
+    height: 35px;
+    justify-content: space-between;
+    margin-top: 0.5em;
+    border-radius:3px;
+}
+.terminput:hover{
+    border: 1px solid hsl(202, 55%, 16%);
+}
+
+.terminput button {
+    border-radius: 3px;
+    
+}
+.termbutton{
+    width: 40%;
+    background-color: aliceblue;
+    font-family:'Plus Jakarta Sans b' ;
+    border: 0;
+    font-size: 80%;
+}
+
+.terminput input {
+    border-radius: 3px;
+}
+
+
+.mortgagetype {
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    width: 90%;
+    align-self: center;
+}
+.repayments{
+    font-family:'Plus Jakarta Sans b' ;
+    border: 1px solid hsl(201, 29%, 46%);
+    border-radius: 3px;
+    margin:3px 0 2px 0;
+    height: 1.5em;
+    height: 35px;
+    margin-top: 10px;
+    border-radius: 3px;
+    
+}
+.repayments:hover{
+    border: 1px solid hsl(61, 51%, 61%);
+}
+
+
+.repayments label {
+    color:hsl(202, 55%, 16%) ;
+}
+
+#repaymentinput{
+    margin-top: 10px;
+
+
+}
+
+.repayments label {
+    margin-bottom: 10px;
+}
+.interest {
+    font-family:'Plus Jakarta Sans b' ;
+    border: 1px solid hsl(201, 29%, 46%);
+    border-radius: 3px;
+    margin: 5px 0 2px 0 ;
+    height: 1.5em;
+    height: 35px;
+    border-radius: 3px;
+    
+}
+
+.interest:hover{
+    border: 1px solid hsl(61, 51%, 61%);
+}
+#interestinput{
+    margin-top: 10px;
+    accent-color: hsl(61, 70%, 52%);
+}
+
+.interest label {
+    color:hsl(202, 55%, 16%) ;
+}
+
+
+
+.rateinput p {
+    background-color: aliceblue;
+    font-size: 15px;
+    width: 20%;
+    font-family: 'Plus Jakarta Sans b';
+    text-align: center;
+    padding: 7.5px;
+    border-radius: 3px;
+}
+
+.mortgageamount button{
+    border: 0;
+    background-color: aliceblue;
+    font-family: 'Plus Jakarta Sans b';
+
+}
+
+
+
+
+@media only screen and (max-width: 32em) {
+    .whole {
         display: flex;
-        background-color: white;
-        border-radius: 20px;
+        flex-direction: column;
+        height:100%;
+        border-radius: 0;
     }
-    
+
     .white {
-        flex:1 0 50%;
-        max-width: 50%;
-        justify-content:space-evenly;
-        display: flex;
-        flex-direction: column;
+        flex: 2;
         
-        box-sizing: border-box;
-        
-    
-    }
-    
-    .dark{
-        flex:1 0 50%;
-        border-radius: 0% 20px 20px 70px;
-        max-width: 50%;
-        background-color: hsl(202, 55%, 16%);
-        justify-content: center ;
-        align-items: center;
-        box-sizing: border-box;
-        flex-direction: column;
-        
-    }
-    
-    .darkcontainer {
-        display: flex;
-        flex-direction: column;
-        height: fit-content;
-        align-self: center;
-        margin-top: 60px;
-        text-align: center;
-    }
-    
-    .imagediv {
-        margin:20px 20px 0 20px;
-        text-align: center;
-        padding-bottom: 0;
-        width: 70%;
-        align-self: center;
-    }
-    .imagediv img{
-        max-width: 50%;
-    }
-    .h3div {
-        text-align: center;
-        
-    }
-    
-    .h3div h3{
-        color: white;
-    }
-    .pdiv {
-        text-align: center;
-    }
-    
-    .pdiv p {
-        color: rgb(189, 189, 189);
-        font-size: 13px
-    }
-    @font-face {
-        font-family: 'Plus Jakarta Sans';
-        src: url('./assets/PlusJakartaSans-VariableFont_wght.ttf');
-        font-weight: 500 700;
-    }
-    
-    @font-face {
-        font-family:'Plus Jakarta Sans b' ;
-        src: url('./assets/PlusJakartaSans-Bold.ttf');
-        font-weight: 500 700;
-    }
-    
-    .mc {
-        display: flex;
-        justify-content: space-between;
-        height: 1.5em;
-        align-items: center;
-        align-self: center;
-        width: 90%;
-    }
-    
-    .mc h3{
-        font-size: 20px;
-    }
-    
-    .mc a {
-        font-size: 11px;
-        align-self: center;
-        margin: 0;
-        text-decoration: underline;
-    }
-
-    .mc a:hover{
-        cursor: pointer;
-        text-shadow: 2px 2px 2px hsl(202, 55%, 16%);
-    }
-    
-    .mortgageamount{
         width: 90%;
         align-self: center;
-        display: flex;
-        flex-direction: column;
-        
-        
-        
-    }
-    .mortgageinput input {
-        width: 100%;
-        border-radius: 3px;
-    }
-    .mortgageinput button {
-        width: 15%;
-        border-radius: 3px;
-    }
-    
-    .mortgageinput {
-        display: flex;
-        border: 1px solid hsl(201, 29%, 46%);
-        border-radius: 3px;
-        height: 35px;
-        margin: 0;
-        padding: 0;
-        
+        border-radius: 0;
     }
 
-    .mortgageamount label {
-        margin-bottom: 0.75em;
+    .dark {
+        flex: 1;
+        width: 90%;
+        align-self: center;
     }
-    
-    
     .calculate {
-        
-        
-        
-        border-radius: 20px;
-        border: 0px;
-        font-family: 'Plus Jakarta sans b';
         width: 90%;
-        align-self: center;
+        margin: 1em 0 1em 0;
         
-        
-        
-    
     }
 
     .calculatebutton {
-        font-size: 13px;
-        
-        background-color: hsl(61, 70%, 52%);
-        border-radius: 20px;
-        border: 0px;
-        font-family: 'Plus Jakarta sans b';
-        width: fit-content;
-        height: 2.5em;
-        text-align: center;
-        
+        width: 100%;
     }
-    
-    
-    .calculatebutton:hover{
-        background-color: hsl(61, 64%, 32%);
-    }
-    .calculatebutton::before {
-        content: url('./assets/icon-calculator.svg'); 
-        vertical-align: middle;       
-                
-    }
-    .mortgagetermandrates{
+
+    .mc {
         display: flex;
-        width: 90%;
-        justify-content: center;
-        align-self: center;
+        flex-direction: column;
+        padding: 0;
         height: fit-content;
-        
+    }
+
+    .mc h3 {
+        font-size: 1em;
+        align-self: flex-start;
+        margin: 0 0 0.5em 0;
         
     }
+
+    .mc a{
+        align-self: flex-start;
+    }
     
-    .term{
-        width: 50%;
-        display: flex;
+    .mortgageamount {
+        margin: 1em 0 0 0;
+    }
+    .mortgagetermandrates {
+        display:flex;
         flex-direction: column;
-        margin-right: 10px;
-        border-radius:3px;
-        
-    
-    
-        
     }
-    
-    .rates{
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        border-radius:3px;
-    
-        
-    }
-    
-    .rateinput {
-        display: flex;
+
+    .term {
         width: 100%;
-        border: 1px solid hsl(201, 29%, 46%);
-        border-radius: 3px;
-        height: 35px;
-        justify-content: space-between;
-        margin-top: 0.5em;
-        border-radius:3px;
+        margin: 1em 0 1em 0;
     }
-    
-    .rateinput input {
-        border-radius: 3px;
-    }
-    .terminput {
-        display: flex;
+
+    .rates {
         width: 100%;
-        border: 1px solid hsl(201, 29%, 46%);
-        border-radius: 3px;
-        height: 35px;
-        justify-content: space-between;
-        margin-top: 0.5em;
-        border-radius:3px;
     }
-    
-    .terminput button {
-        border-radius: 3px;
-        
-    }
-    .termbutton{
-        width: 40%;
-        background-color: aliceblue;
-        font-family:'Plus Jakarta Sans b' ;
-        border: 0;
-        font-size: 80%;
-    }
-    
-    .terminput input {
-        border-radius: 3px;
-    }
-    
-    
+
     .mortgagetype {
-        display: flex;
-        flex-direction: column;
-        border-radius: 3px;
-        width: 90%;
-        align-self: center;
+        margin: 1em 0 0 0;
     }
-    .repayments{
-        font-family:'Plus Jakarta Sans b' ;
-        border: 1px solid hsl(201, 29%, 46%);
-        border-radius: 3px;
-        margin:3px 0 2px 0;
-        height: 1.5em;
-        height: 35px;
-        margin-top: 10px;
-        border-radius: 3px;
-        
-    }
-    
-    
-    .repayments label {
-        color:hsl(202, 55%, 16%) ;
-    }
-    
-    #repaymentinput{
-        margin-top: 10px;
 
-    
+    .dark {
+        border-radius: 0;
     }
-    
-    .repayments label {
-        margin-bottom: 10px;
+    .h3div h3{
+        font-size: 1em;
     }
-    .interest {
-        font-family:'Plus Jakarta Sans b' ;
-        border: 1px solid hsl(201, 29%, 46%);
-        border-radius: 3px;
-        margin: 5px 0 2px 0 ;
-        height: 1.5em;
-        height: 35px;
-        border-radius: 3px;
-        
+    .darkcontainer{
+        margin:0;
     }
-    #interestinput{
-        margin-top: 10px;
-        accent-color: hsl(61, 70%, 52%);
+    .pdiv p {
+        font-size: 0.7em ;
+        padding: 0 1em 1em 1em;
     }
-    
-    .interest label {
-        color:hsl(202, 55%, 16%) ;
+    .imagediv {
+        padding: 0;
+        margin: 1em 0 0 0;
     }
-    
-    
-    
-    .rateinput p {
-        background-color: aliceblue;
-        font-size: 15px;
-        width: 20%;
-        font-family: 'Plus Jakarta Sans b';
-        text-align: center;
-        padding: 7.5px;
-        border-radius: 3px;
-    }
-    
-    .mortgageamount button{
-        border: 0;
-        background-color: aliceblue;
-        font-family: 'Plus Jakarta Sans b';
-    
+
+    .imagediv img {
+        max-width: 70%;
     }
 
 
-
+}
