@@ -20,15 +20,15 @@
             <div class = "mortgageamount">
                 <label>Mortgage Amount</label>
                 <div class="mortgageinput">
-                    <button>£</button>
-                    <input id = "1" type="number">
+                    <button id = "mortgageamountbutton">£</button>
+                    <input id = "one" type="number">
                 </div>   
             </div>
             <div class="mortgagetermandrates">
                 <div class="term">
                     <label>Mortgage Term</label>
                     <div class="terminput">
-                        <input id = "2" type="number">
+                        <input id = "two" type="number">
                         <button class = "termbutton">years</button>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                 <div class="rates">
                     <label for="">Interest Rate</label>
                     <div class="rateinput">
-                        <input id = "3" type="number">
+                        <input id = "three" type="number">
                         <p>%</p>
                     </div>
                 </div>
@@ -44,11 +44,13 @@
             <div class="mortgagetype">
                 <label for="">Mortgage Type</label>
                 <div class="repayments"><input type="radio" id = "repaymentinput" name="mortgagetype" checked ><label for="repaymentinput">Repayments</label></div>
-                <div class="interest"><input type="radio" id = "interestinput" name = "mortgagetype" ><label for="interestinput">Interest Only</label></div>
+                <div class="interest"><input type="radio" id = "interestinput" name = "mortgagetype"  ><label for="interestinput">Interest Only</label></div>
             </div>
-            <button class="calculate">
-                Calculate Repayments
-            </button>
+            <div class="calculate">
+                <button class="calculatebutton">
+                    Calculate Repayments
+                </button>
+            </div>  
 
         </div>
         <div class = "dark">
