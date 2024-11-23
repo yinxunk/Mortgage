@@ -346,7 +346,7 @@ input[type = "number"]:focus {
 }
 #interestinput{
     margin-top: 10px;
-    accent-color: hsl(61, 70%, 52%);
+    
 }
 
 .interest label {
