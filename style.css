@@ -381,6 +381,7 @@ input[type = "number"]:focus {
         flex-direction: column;
         height:100%;
         border-radius: 0;
+        flex-wrap: wrap;
     }
 
     .white {
@@ -467,5 +468,6 @@ input[type = "number"]:focus {
         max-width: 70%;
     }
 
+  
 
 }

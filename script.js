@@ -99,11 +99,12 @@ button.addEventListener("click", () => {
             const h3 = document.createElement('h3');
             h3.textContent = "Your results";
             h3.style.color = "white"
+            h3.style.margin = "0.1em 0 0.5em 0"
             const p = document.createElement('p');
             p.textContent = "Your results are shown below baed on the information you provided. To adjust the results, edit the form and click \"calculate repayments\" again."
             p.style.color = 'hsl(200, 26%, 54%)';
             p.style.paddingBottom = '2em';
-            p.style.fontSize = '13px'
+            p.style.fontSize = '0.7em'
             description.appendChild(h3);
             description.appendChild(p);
             // description.style.width = "80%";
@@ -112,7 +113,7 @@ button.addEventListener("click", () => {
             results.style.borderRadius = "10px";
             results.style.borderTop = "4px solid hsl(61, 70%, 52%)";
             results.style.backgroundColor = "hsl(201, 57%, 11%)";
-            // results.style.width = '80%';
+            results.style.maxHeight = '50%';
             results.style.alignSelf = "center";
             const resultlabel = document.createElement('label');
             resultlabel.textContent = "Your monthly repayments";
@@ -120,7 +121,8 @@ button.addEventListener("click", () => {
             const h1 = document.createElement('h1');
             h1.textContent = `£${totalround}`;
             h1.style.color = 'hsl(61, 70%, 52%)';
-            h1.style.fontSize = '3em';
+            h1.style.fontSize = 'calc(4vh + 2vw)';
+            h1.style.overflow = 'auto';
             h1.style.margin = '0.2em 0 0.3em 0';
             const hr = document.createElement('hr');
             const termlabel = document.createElement('label');
@@ -129,6 +131,8 @@ button.addEventListener("click", () => {
             const h3term = document.createElement('h3');
             h3term.textContent = `£${totaltermround}`
             h3term.style.color = 'white';
+            h3term.style.margin = "0.5em 0 0 0"
+            h3term.style.fontSize = '2vh';
             results.appendChild(resultlabel);
             results.appendChild(h1);
             results.appendChild(hr);
@@ -148,10 +152,52 @@ button.addEventListener("click", () => {
     
         }
         else {
-            const total = (mortgagevalue * (ratevalue/100) * termvalue);
-            const value = document.createElement("p");
-            value.textContent = `${total}`;
-            dark.appendChild(value);
+            ratepercent = ratevalue/100;
+            const total = mortgagevalue * ((ratepercent/12) * Math.pow(1 + (ratepercent/12), (termvalue*12))) /(Math.pow(1 + (ratepercent/12), (termvalue*12)) - 1);
+            const totalround = Number.parseFloat(total).toFixed(2);
+            const totaldiv = document.createElement('div');
+            const description = document.createElement('div');
+            const h3 = document.createElement('h3');
+            h3.textContent = "Your results";
+            h3.style.color = "white"
+            const p = document.createElement('p');
+            p.textContent = "Your results are shown below baed on the information you provided. To adjust the results, edit the form and click \"calculate repayments\" again."
+            p.style.color = 'hsl(200, 26%, 54%)';
+            p.style.paddingBottom = '2em';
+            p.style.fontSize = '0.7em'
+            description.appendChild(h3);
+            description.appendChild(p);
+            // description.style.width = "80%";
+            description.style.alignSelf = "center";
+            const results = document.createElement("div");
+            results.style.borderRadius = "10px";
+            results.style.borderTop = "4px solid hsl(61, 70%, 52%)";
+            results.style.backgroundColor = "hsl(201, 57%, 11%)";
+            results.style.maxHeight = "50%";
+            // results.style.width = '80%';
+            results.style.alignSelf = "center";
+            const resultlabel = document.createElement('label');
+            resultlabel.textContent = "Your monthly repayments";
+            resultlabel.style.color = 'hsl(200, 26%, 54%)';
+            const h1 = document.createElement('h1');
+            h1.textContent = `£${totalround}`;
+            h1.style.color = 'hsl(61, 70%, 52%)';
+            h1.style.fontSize = '3em';
+            h1.style.margin = "0.1em 0 0 0"
+            
+            
+            results.appendChild(resultlabel);
+            results.appendChild(h1);
+            
+            
+            results.style.display = "border-box";
+            results.style.padding = '5%';
+            totaldiv.appendChild(description);
+            totaldiv.appendChild(results);
+            dark.appendChild(totaldiv);
+            totaldiv.style.padding = "2% 7% 7% 7% "
+            description.style.maxWidth = "100%"
+            results.style.maxWidth = "100%"
         }
     }
     
